@@ -1,5 +1,6 @@
 // Covei Denis - 312CA
 #include <stdbool.h>
+#include <stdlib.h>
 #include "types_and_defs.h"
 
 bool valid(int coord, int range_min, int range_max)

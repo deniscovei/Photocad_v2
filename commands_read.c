@@ -1,6 +1,8 @@
 // Covei Denis - 312CA
 #include <stdio.h>
+#include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 #include "types_and_defs.h"
 
 int hash(char *key)
