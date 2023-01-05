@@ -1,55 +1,70 @@
-# Covei Denis - 312CA
+# Image editor CLI - *Covei Denis - 312CA*
 
-    In order to run the program, use the 'make build' rule and execute it with
-    ./image_editor
+In order to run the program, use the **make build** rule and execute it with
+**./image_editor** in terminal.
 
-    LOAD <file>
-        Upload a ppm or pgm image from a given file.
-    
-    SELECT <x1> <y1> <x2> <y2>
-        Select pixels from width range [x1, x2) and  height range [y1, y2).
-        It is not mandatory that x1 < x2 or y1 < y2. Coordinates may be
-        replaced within the program.
+## Commands
 
-    SELECT ALL
-        Select whole image.
+**LOAD &nbsp;&nbsp; \<file\>**\
+Upload a **ppm** or **pgm** image from **\<file\>**.
 
-    HISTOGRAM <max_height> <number_of_bins>
-        Display the image histogram using max_height stars and exactly
-        number_of_bins bins.
-        > **Note** The image must be color.
+\
+**SELECT \<x<sub>1</sub>\> \<y<sub>1</sub>\> \<x<sub>2</sub>\> 
+\<y<sub>2</sub>\>**\
+Select pixels from width range [x<sub>1</sub>,
+x<sub>2</sub>) and  height range [y<sub>1</sub>, y<sub>2</sub>).
+> **Note:** It is not mandatory that **x<sub>1</sub> < x<sub>2</sub>**
+or **y<sub>1</sub> < y<sub>2</sub>**. Coordinates may be
+replaced within the program execution.
 
-    EQUALIZE
-        Equalize the image.
-        The image must be grayscale.
+\
+**SELECT ALL**\
+Select the whole image.
 
-    ROTATE <angle>
-        If the whole image is selected, rotate the image. Otherwise rotate the
-        current selection.
-        The selection must be square in order to rotate it.
+\
+**HISTOGRAM \<max_height\> \<number_of_bins\>**\
+Display the image histogram using **max_height** stars and exactly
+**number_of_bins** bins.
+> **Note:** The image must be color.
 
-    CROP
-        Crop the current selection.
-        The image is automatically selected all after a succesful crop.
+\
+**EQUALIZE**\
+Equalize the image.
+> **Note:** The image must be grayscale.
 
-    APPLY <parameter>
-        Apply parameter to current selection.
-        Possible parameters are:
-            EDGE
-            SHARPEN
-            BLUR
-            GAUSSIAN_BLUR
-        The image must be color.
+\
+**ROTATE \<angle\>**\
+If the whole image is selected, rotate the image. Otherwise rotate the
+current selection.
+> **Note:** The selection must be square in order to rotate it.
 
-    SAVE <file_name> [ascii]
-        Save the current image with the file_name
-        If optional argument [ascii] is present, then the image is saved in
-        ascii format.
-        The default format is binary.
+\
+**CROP**\
+Crop the current selection.
+The image is automatically selected all after a succesful crop.
 
-    EXIT
-        Unload the image and exit the program.
+\
+**APPLY \<parameter\>**\
+Apply an effect to current selection.
+The possible effects given as **\<parameter\>** are:
+* **EDGE**
+* **SHARPEN**
+* **BLUR**
+* **GAUSSIAN_BLUR**
+> **Note:** The image must be color.
 
-    Invalid command
-        If a typed command is not found, an error message will be displayed.
+\
+**SAVE \<file_name\> [ascii]**\
+Save the current image with the file_name
+If optional argument **[ascii]** is present, then the image is saved in
+ascii format.
+The default format is **binary**.
+
+\
+**EXIT**\
+Unload the image and exit the program.
+
+\
+**Invalid command**\
+If a typed command is not found, an error message will be displayed.
 
