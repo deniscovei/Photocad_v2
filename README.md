@@ -55,7 +55,7 @@ The possible effects given as **\<parameter\>** are:
 
 \
 **SAVE \<file_name\> [ascii]**\
-Save the current image with the file_name
+Save the current image with the name *\<file_name\>*
 If optional argument **[ascii]** is present, then the image is saved in
 ascii format.
 The default format is **binary**.
