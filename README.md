@@ -5,7 +5,7 @@ In order to run the program, use the **make build** rule and execute it with
 
 ## Commands
 
-**LOAD &nbsp;&nbsp; \<file\>**\
+**LOAD \<file\>**\
 Upload a **ppm** or **pgm** image from **\<file\>**.
 
 \
