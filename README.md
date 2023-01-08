@@ -24,12 +24,22 @@ Select the whole image.
 \
 **HISTOGRAM \<max_height\> \<number_of_bins\>**\
 Display the image histogram using **max_height** stars and exactly
-**number_of_bins** bins.
-> **Note:** The image must be color.
+**number_of_bins** bins, i.e. intervals.
+
+***Operation description:** A histogram is a graph showing the number of pixels in
+an image at each different intensity value found in that image.*
+
+> **Note:** The image must be grayscale.
 
 \
 **EQUALIZE**\
 Equalize the image.
+
+***Operation description:** Histogram Equalization is a computer image processing
+technique used to improve contrast in images . It accomplishes this by effectively
+spreading out the most frequent intensity values, i.e. stretching out the intensity
+range of the image.*
+
 > **Note:** The image must be grayscale.
 
 \
@@ -41,7 +51,7 @@ current selection.
 \
 **CROP**\
 Crop the current selection.
-The image is automatically selected all after a succesful crop.
+The whole size of the image is automatically selected after a succesful crop.
 
 \
 **APPLY \<parameter\>**\
@@ -51,14 +61,19 @@ The possible effects given as **\<parameter\>** are:
 * **SHARPEN**
 * **BLUR**
 * **GAUSSIAN_BLUR**
+
+***Operation description:** This operation is done by using kernles, which are
+small predefined matrices, each one being particularly made for a specific effect.
+This is accomplished by doing a convolution between the kernel and the image.*
+
 > **Note:** The image must be color.
 
 \
 **SAVE \<file_name\> [ascii]**\
-Save the current image with the name *\<file_name\>*.\
-If optional argument **[ascii]** is present, then the image is saved in
-ascii format.\
-The default format is **binary**.
+Save the current image with the name **\<file_name\>**.\
+If the optional argument **[ascii]** is present, then the image is saved in
+**ascii** format.\
+The default saving format is **binary**.
 
 \
 **EXIT**\
