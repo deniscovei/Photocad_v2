@@ -62,7 +62,7 @@ The possible effects given as **\<parameter\>** are:
 * **BLUR**
 * **GAUSSIAN_BLUR**
 
-***Operation description:** This operation is done by using kernles, which are
+***Operation description:** This operation is done by using kernels, which are
 small predefined matrices, each one being particularly made for a specific effect.
 This is accomplished by doing a convolution between the kernel and the image.*
 
