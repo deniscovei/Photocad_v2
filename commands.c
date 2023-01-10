@@ -872,9 +872,7 @@ void write_color(char *format, img image, FILE *file)
 				fwrite(blue, sizeof(char), strlen(blue), file);
 				free(blue);
 
-				//if (j != height - 1) {
 				fwrite(" ", sizeof(char), 1, file);
-				//}
 			}
 			fwrite("\n", sizeof(char), 1, file);
 		}
