@@ -151,7 +151,7 @@ void img_select(int width, int height, rct *slct, bool whl_img, bool loaded,
 		x2 = width;
 		y2 = height;
 
-		// succesful selection
+		// successful selection
 		*slct = (rct){ {x1, y1}, {x2, y2} };
 		if (msg)
 			printf("Selected ALL\n");
@@ -185,11 +185,11 @@ void img_select(int width, int height, rct *slct, bool whl_img, bool loaded,
 			x1 != x2 && y1 != y2) {
 			*slct = (rct){ {x1, y1}, {x2, y2} };
 
-			// succesful selection
+			// successful selection
 			if (msg)
 				printf("Selected %d %d %d %d\n", x1, y1, x2, y2);
 		} else {
-			// unsuccesful selection
+			// unsuccessful selection
 			if (msg)
 				printf("Invalid set of coordinates\n");
 		}
@@ -294,7 +294,7 @@ void load(img *image, rct *slct, bool *loaded)
 	// automatically select the whole image if loaded
 	img_select(image->width, image->height, slct, true, loaded, false);
 
-	// succesful load
+	// successful load
 	printf("Loaded %s\n", filename);
 }
 
@@ -410,7 +410,7 @@ void equalize(img image, bool loaded)
 		}
 	}
 
-	// if image was succesfully equalized
+	// if image was successfully equalized
 	printf("Equalize done\n");
 
 	free(frq);
@@ -576,7 +576,7 @@ void rotate(img *image, rct *slct, bool loaded)
 		return;
 	}
 
-	// succesful rotation
+	// successful rotation
 	printf("Rotated %d\n", angle);
 
 	// restrict the angle within the [0, 360) degrees interval
@@ -650,7 +650,7 @@ void crop(img *image, rct *slct, bool loaded)
 	// automatically select the whole image if cropped
 	img_select(image->width, image->height, slct, true, loaded, false);
 
-	// succesful crop
+	// successful crop
 	printf("Image cropped\n");
 }
 
@@ -742,7 +742,7 @@ void apply(img image, rct slct, char arg[], bool loaded)
 	int j_begin = (slct.upr.x == 0) ? 1 : slct.upr.x;
 	int j_end = (slct.lwr.x == width) ? width - 1 : slct.lwr.x;
 
-	// succesful apply
+	// successful apply
 	printf("APPLY %s done\n", arg);
 
 	// if selection to apply is void
@@ -946,7 +946,7 @@ void save(img image, bool loaded)
 
 	fclose(image_file);
 
-	// succesful save
+	// successful save
 	printf("Saved %s\n", filename);
 }
 
