@@ -1,4 +1,4 @@
-# Image editor CLI - *Covei Denis - 312CA*
+# Image editor CLI - *Covei Denis*
 
 In order to run the program, use the **make build** rule and execute it with
 **./image_editor** in terminal.
